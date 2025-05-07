@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Month, Tanu!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #ffccff, #ffe6f0);
+      color: #333;
+      text-align: center;
+    }
+
+    .container {
+      padding: 60px 20px;
+    }
+
+    .message-box {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #d63384;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    .video-box {
+      margin-top: 40px;
+    }
+
+    video {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="message-box">
+      <h1>Happy Birthday Month, Tanu! 💖</h1>
+      <p>I LOVEE YOUU SO SO FREAKING MUCH MY PENGUIN</p>
+    </div>
+
+    <div class="video-box">
+      <video id="birthday-video" controls poster="video-thumbnail.jpg">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <audio id="bg-music" src="tanu.mp3"></audio>
+
+  <script>
+    const video = document.getElementById('birthday-video');
+    const music = document.getElementById('bg-music');
+
+    // Play music when video starts
+    video.addEventListener('play', () => {
+      music.play();
+    });
+
+    // Stop music when video ends
+    video.addEventListener('ended', () => {
+      music.pause();
+      music.currentTime = 0;  // Reset music to start from the beginning
+    });
+  </script>
+
+</body>
+</html>
+
+
